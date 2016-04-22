@@ -115,7 +115,7 @@ func (d *Driver) Create() error {
 		},
 	}
 
-	id, err := dc.CreateContainer(containerConfig, d.MachineName)
+	id, err := dc.CreateContainer(containerConfig, d.MachineName, nil)
 	if err != nil {
 		return fmt.Errorf("Error creating container: %s", err)
 	}
